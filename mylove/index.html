@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>i love you,my dear</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<div class="audio">
+	<audio src="audio/Flowers.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+</div>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2018—03-28,</span><br />
+			<span class="space"/><span class="comments">*至今.</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> WANG<br />
+			Girl name = <span class="keyword">Mrs</span> WANG<br />
+			<span class="comments">// Fall in love river. </span><br />
+			The boy love the girl;<br />
+			<span class="comments">// They love each other.</span><br />
+			The girl loved the boy;（uncertain = =||）<br />
+			<span class="comments">// AS time goes on.</span><br />
+			The boy can not be separated the girl;<br />
+			<span class="comments">// At the same time.</span><br />
+			The girl can not be separated the boy;（uncertain = =||）<br />
+			<span class="comments">// Both wind and snow all over the sky.</span><br />
+			<span class="comments">// Whether on foot or 5 kilometers.</span><br />
+			<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
+			<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
+			<span class="placeholder"/><span class="comments">// Whether it is right now</span><br />
+			<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
+			<span class="placeholder"/>The boy has but one dream;<br />
+			<span class="comments">// The boy wants the girl could well have been happy.</span><br />
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 王先生</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="someThings">
+	<h1>发生的一些事情...</h1>
+	<ul>
+		<li>我们第一次约会,去吃了北京清真,今天风很大,给你带了一瓶饮料,你居然让我拧瓶盖(有点儿小激动!),哦,吃饭的时候还给你卷了一个烤鸭饼,你大方接受 <i>☺</i><span>2018.4.6</span></li>
+		<li>我想去给你送鱼，可是你没有养水，我说去给你养水，你说你自己会，没约成功。<i>☹</i><span>2018.4.7</span></li>
+		<li>早上经过你工位，看到你吃早点，冲我微笑漏出小虎牙，我冲你眨眼，那一刻我心里暖化了！！！<i>☺</i><span>2018.4.9</span></li>
+		<li>不知道为什么你不爱回我消息，我不能确定是不是你对我没感觉，还是我聊的方向不对，有点迷茫，渐渐的不知道聊什么了。百度查了一下传媒所修专业，希望可以有突破<i>☹</i><span>2018.4.9</span></li>
+		<li>无聊的我，妄自推测你朋友圈发的音乐，是不是和我有联系，但貌似又没有联系...愚钝的我<i>☹</i><span>2018.4.9</span></li>
+		<li>经过你那里，你没有打招呼，我觉得事情有点儿复杂了<i>☹</i><span>2018.4.10</span></li>
+		<li>感谢感谢，匿名买了一杯奶茶给她，她接受了，希望她开心<i>☺</i><span>2018.4.10</span></li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	console.log(together);
+	together.setFullYear(2018,02,28);
+	together.setHours(0);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
